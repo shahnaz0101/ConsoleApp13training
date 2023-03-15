@@ -1,46 +1,40 @@
-﻿namespace arrays
+﻿using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
+namespace arrays
 {
-    public static class Program
+    public class Program
     {
-        //public static void Main()
-        //{
-        //    int[] arrayofInt = new int[5] { 17, 4, 11, 7, 3 };
-        //    for (int i = 0; i < arrayofInt.Length; i++)
-        //        Console.WriteLine(arrayofInt[i]);
-        //int[] arrayofInt = new int[3] { 49, 178, 63 };
-        //int max = 0;
-        //for (int i = 0; i < arrayofInt.Length; i++)
-        //{
-        //    if(arrayofInt[i] > max)
-        //    {
-        //        max = arrayofInt[i];
-
-        //    }  
-
-        //}
-        //Console.WriteLine(max);
-        //}
         public static void Main()
         {
-            int previous = 0;
-            int current = 1;
-            int next = 1;
-            int length = 20;
-            int[] array = new int[length];
-
-                Console.WriteLine(previous);
-                Console.WriteLine(current);
-
-            for(int i=0; i<length; i++)
+            string str = "zwzakiirr";
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    int count = 0;
+            //    for (int j = 0; j < str.Length; j++)
+            //    {
+            //        if (str[i] == str[j])
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //    Console.WriteLine(str[i]+"-"+count);
+            //}
+            foreach (var letter in str)
             {
-                previous = current;
-                current = next;
-                Console.WriteLine(current);
-                next = previous + current;
+                int count = 0;
 
-                
+                foreach (var allLetter in str)
+                {
+                    if(allLetter == letter)
+                    {
+                        count++;
+                    }
+                }
+
+                Console.WriteLine(letter+"-"+count);
             }
-            
+
         }
     }
 }

@@ -7,34 +7,32 @@ namespace arrays
     {
         public static void Main()
         {
-            string str = "zwzakiirr";
-            //for (int i = 0; i < str.Length; i++)
-            //{
-            //    int count = 0;
-            //    for (int j = 0; j < str.Length; j++)
-            //    {
-            //        if (str[i] == str[j])
-            //        {
-            //            count++;
-            //        }
-            //    }
-            //    Console.WriteLine(str[i]+"-"+count);
-            //}
-            foreach (var letter in str)
+            string str = "Lorem sit ametist uwewuatokua";
+            for (int i = 0; i < str.Length; i++)
             {
                 int count = 0;
-
-                foreach (var allLetter in str)
+                int temp = i - 1;
+                bool flag = false;
+                while (temp > 0)
                 {
-                    if(allLetter == letter)
+                    if (str[temp] == str[i])
                     {
-                        count++;
+                        flag = true;
                     }
+                    temp--;
                 }
-
-                Console.WriteLine(letter+"-"+count);
+                if (flag == false)
+                {
+                    for (int j = 0; j < str.Length; j++)
+                    {
+                        if (str[i] == str[j])
+                        {
+                            count++;
+                        }
+                    }
+                    Console.WriteLine(str[i] + "-" + count);
+                }
             }
-
         }
     }
 }
